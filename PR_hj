@@ -1,0 +1,39 @@
+# AIFFEL Campus Online Code Peer Review Templete
+- 코더 : 조은별
+- 리뷰어 : 소현진
+
+
+# PRT(Peer Review Template)
+- [X] 1. 주어진 문제를 해결하는 완성된 코드가 제출되었나요? 
+          - 예. 정답을 random.sample(range(10), 5)로 초기화하고, 
+               사용자 입력을 받아 strike/ball를 정확히 출력합니다.
+
+          - 근거 : 정답 생성 -> 입력 -> 검증 -> 판정
+              answer = random.sample(range(10), 5)
+             isdigit(), len(s)==5, len(set(s))==5
+             strike: sum(a == b for a, b in zip(answer, guess))
+             ball: sum(1 for g in guess if g in answer) - strike
+             ![1](../images/1.png)
+
+- [X] 2. 전체 코드에서 가장 핵심적이거나 가장 복잡하고 이해하기 어려운 부분에 작성된 
+주석 또는 doc string을 보고 해당 코드가 잘 이해되었나요?
+    - 코드 자체가 간결해 주석 없이도 읽히지만, 핵심은 집계 로직 2줄입니다.
+       strike = sum(a == b for a, b in zip(answer, guess))
+       common = sum(1 for g in guess if g in answer) 
+    - 해당 코드 블럭에 doc string/annotation이 달려 있어서 이해와 확인이 쉬웠음.
+              ![2](../images/2.png)
+
+- [X] 3. 에러가 난 부분을 디버깅하여 문제를 해결한 기록을 남겼거나
+새로운 시도 또는 추가 실험을 수행해봤나요?
+      - 문제에 의거해 순차적으로 잘 작성되었음. 별도 디버깅 없음.
+        - 중요! 잘 작성되었다고 생각되는 부분을 캡쳐해 근거로 첨부
+         ![2](../images/2.png) 
+- [X] 4. 회고를 잘 작성했나요?
+    - first quest로 coding에 충실하였음.
+
+- [X] 5. 코드가 간결하고 효율적인가요?
+    - 파이썬 스타일 가이드 (PEP8) 기준, 
+    - 코드 중복을 최소화하여 모듈화 하였음. 
+    - 함수화 모듈화 부분 추가 보완 가능함.
+       ![3](../images/3.png)
+
